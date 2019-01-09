@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/info_text"
+            tools:src="@drawable/level1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"/>
+
+        <TextView
+            android:id="@+id/levelNumText"
+            tools:text="testing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/info_text"
+            android:layout_alignStart="@id/info_text"
+            android:layout_alignTop="@id/info_text"
+            android:layout_alignRight="@id/info_text"
+            android:layout_alignEnd="@id/info_text"
+            android:layout_alignBottom="@id/info_text"
+            android:layout_margin="10dp"
+            android:gravity="top|center_horizontal" />
+        <TextView
+            android:id="@+id/playNowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/info_text"
+            android:layout_alignStart="@id/info_text"
+            android:layout_alignTop="@id/info_text"
+            android:layout_alignRight="@id/info_text"
+            android:layout_alignEnd="@id/info_text"
+            android:layout_alignBottom="@id/info_text"
+            android:layout_margin="10dp"
+            android:gravity="bottom|center_horizontal" />
+    </RelativeLayout>
+
+</LinearLayout>

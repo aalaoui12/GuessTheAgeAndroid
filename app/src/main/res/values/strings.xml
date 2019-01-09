@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Impossible Guess The Age Challenge</string>
+    <string name="num_level_key">Level Number</string>
+    <string name="num_coins_key">Number of Coins</string>
+    <string name="hint_code">Hint Type</string>
+    <string name="image_view_id">Image View ID</string>
+    <string name="level_answer">Level Answer</string>
+    <string name="test_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="test_interstitial_video">ca-app-pub-3940256099942544/8691691433</string>
+    <string name="test_interstitial_rewarded_video">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="official_interstitial_id">ca-app-pub-2090383074140974/7452530178</string>
+    <string name="official_banner_id">ca-app-pub-2090383074140974/8840274642</string>
+    <string name="admob_app_id">ca-app-pub-2090383074140974~5886808248</string>
+    <string name="level_done_coins_gained">You gained 1 coin!</string>
+</resources>
