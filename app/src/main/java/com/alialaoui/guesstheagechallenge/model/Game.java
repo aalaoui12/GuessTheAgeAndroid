@@ -7,7 +7,9 @@ public class Game {
 
     Level levels[] = new Level[NUM_LEVELS];
     Level thisLevel;
-
+    
+    
+    //initializes all of the levels
     public Game() {
         levels[0] = new Level(32, R.drawable.level1, 0);
         levels[1] = new Level(21, R.drawable.level2, 1);
