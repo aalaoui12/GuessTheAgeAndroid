@@ -210,9 +210,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void startLevelDoneActivity(int numLevel) {
         levelDone.start();
-        mInterstitialAd.show(); //shows ad, make this happen 1 out of every 2 times with random function
+        mInterstitialAd.show(); //shows ad, this can be changed to appear once out of every two times (rand)
         //takes CURRENT LEVEL, also starts GameCompleted Activity if 59th level
-        if(numLevel == 59) { //this has to change if new levels are added. optimize this anyways to automatically scale.
+        if(numLevel == 59) { //make sure to change this with new levels, or make a constant for that
 
             Intent intent = new Intent(getApplicationContext(), GameCompleted.class);
             intent.putExtra(getString(R.string.image_view_id), game.getLevel(numLevel).getGirl());
@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), thisLevel.getGirl());
         person.setImageDrawable(drawable);
 
-        isFirstLocked = false; //resets locked numbers, make new method that does everything to unlock number including aesthetically
+        isFirstLocked = false; //resets locked numbers, this is triggered by hints
         isSecondLocked = false;
         firstNum.setTextColor(Color.WHITE);
         secondNum.setTextColor(Color.WHITE);
@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -359,7 +359,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         nums[0].setVisibility(View.INVISIBLE);
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
@@ -387,7 +387,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -429,7 +429,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -444,7 +444,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -470,7 +470,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -485,7 +485,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -511,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -526,7 +526,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -553,7 +553,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -569,7 +569,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -596,7 +596,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -611,7 +611,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -637,7 +637,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -652,7 +652,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -678,7 +678,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -693,7 +693,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -719,7 +719,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -734,7 +734,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -760,7 +760,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -775,7 +775,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -801,7 +801,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -816,7 +816,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -842,7 +842,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -857,7 +857,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -883,7 +883,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -898,7 +898,7 @@ public class MainActivity extends AppCompatActivity {
                     //if right answer, load new level
                     if(Integer.parseInt(firstNum.getText().toString()) == thisLevel.firstNum() &&
                             Integer.parseInt(secondNum.getText().toString()) == thisLevel.secondNum()) {
-                        //do coins
+                        //update coins
                         startLevelDoneActivity(thisLevel.getNumLevel());
                     }
                     else {
@@ -908,7 +908,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void randomizeButtons(Level level) { //makes sure answer is possible
+    public void randomizeButtons(Level level) { //randomizes answer buttons while *making sure right answer is possible*
         for(int i = 0; i < nums.length; i++) {
             nums[i].setVisibility(View.VISIBLE);
             nums[i].setText(String.valueOf((int) (Math.random() * 9)));
@@ -943,7 +943,7 @@ public class MainActivity extends AppCompatActivity {
         makeLevel(level, sharedPref.getInt(getString(R.string.num_coins_key), 0)); //gives user 3 coins when appropriate
     }
 
-    public void exposeNum() {
+    public void exposeNum() { //hint that shows one digit of the answer
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int currentCoins = sharedPref.getInt(getString(R.string.num_coins_key), 0);
         if(currentCoins < 15) {
@@ -1013,7 +1013,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    public void removeNums() {
+    public void removeNums() { //hint that removes potential answer choices
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int currentCoins = sharedPref.getInt(getString(R.string.num_coins_key), 0);
 
@@ -1041,7 +1041,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-    public void solveLevel() {
+    public void solveLevel() { //"hint" that actually just passes the level
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int currentCoins = sharedPref.getInt(getString(R.string.num_coins_key), 0);
 
