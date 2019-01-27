@@ -41,6 +41,8 @@ public class Level {
         this.picID = picID;
     }
 
+    
+    //calculates the first and second numbers of the ages
     public int firstNum() {
         return age / 10;
     }
