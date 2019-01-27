@@ -7,11 +7,15 @@ public class Level {
     private int numLevel;
     private int picID;
 
+    
+    //need age(answer), picture, and level number to initialize level
     public Level(int age, int picID, int numLevel) {
         this.age = age;
         this.numLevel = numLevel;
         this.picID = picID;
     }
+    
+    //getters and setters
 
     public int getAge() {
         return age;
